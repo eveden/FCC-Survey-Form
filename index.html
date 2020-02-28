@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Fira+Sans+Condensed&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1 id="title">Survey Form</h1>
+        <hr>
+        <p id="description">Let us know how we can improve our website.</p>
+      </header><!--End header-->
+
+      <form id="survey-form" class="container">
+
+        <div class="text"><!--Start Name-->
+          <label id="name-label" class="col-left">*Name:</label>
+          <input id="name" class="col-right" type="text" placeholder="Enter your name" required>
+        </div><!--End Name-->
+        
+        <div class="text"><!--Start Email-->
+          <label id="email-label" class="col-left">*Email:</label>
+          <input id="email" class="col-right" type="email" placeholder="Enter your email" required>
+        </div><!--End Email-->
+
+        <div class="text"><!--Start Age-->
+          <label id="number-label" class="col-left">*Age:</label>
+          <input id="number" class="col-right" type="number" placeholder="Age" min="1" max="100" required>
+        </div><!--End Age-->
+
+        <div><!--Start dropdown-->
+          <label id="dropdown-label" class="col-left">Which option best describes your current role?</label><!--End dropdown-->
+          <select id="dropdown" class="col-right">
+            <option value="">Select an option</option>
+            <option value="Student">Student</option>
+            <option value="Full-time job">Full-time job</option>
+            <option value="Full-time learner">Full-time learner</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+            <option value="other">other</option>
+          </select>
+        </div><!--End dropdown-->
+
+        <div><!--Start radio-->
+          <label id="radio-label" class="col-left">*How likely is it, that you would recommend our website to a friend?</label>
+          <ul id="radio" class="col-right" style="list-style: none">
+            <li>
+              <input type="radio" name="recommend" value="definitely" required>
+              <label for="definetly">Definitely</label>
+            </li>
+            <li>
+              <input type="radio" name="recommend" value="maybe">
+              <label for="maybe">Maybe</label>
+            </li>
+            <li>
+              <input type="radio" name="recommend" value="not sure">
+              <label for="not sure">Not sure</label>
+            </li>
+          </ul>
+        </div><!--End radio-->
+
+        <div id="checkbox"><!--Start checkbox-->
+          <label id="checkbox-label" class="col-left">Things that should be improved in the future <br>(Check all that apply):</label>
+          <div class="col-right" id="checkbox">
+            <div>
+              <input type="checkbox" name="Front-end Projects" value="Front-end Projects">
+              <label for="Front-end Projects">Front-end Projects</label>        
+            </div>
+            <div>
+              <input type="checkbox" name="Back-end Projects" value="Back-end Projects">
+              <label for="Back-end Projects">Back-end Projects</label>        
+            </div>
+            <div>
+              <input type="checkbox" name="Data Visualization" value="Data Visualization">
+              <label for="Data Visualization">Data Visualization</label>        
+            </div>
+            <div>
+              <input type="checkbox" name="Challenges" value="Challenges">
+              <label for="Challenges">Challenges</label>        
+            </div>
+            <div>
+              <input type="checkbox" name="Videos" value="Videos">
+              <label for="Videos">Videos</label>        
+            </div>
+          </div>
+        </div><!--End checkbox-->
+
+        <div class="text">
+          <label id="textarea-label" class="col-left">Any Comments or Suggestions?</label>
+          <textarea class="col-right" rows="10" cols="50"></textarea>
+        </div>
+
+        <div><!--End Button-->
+          <button id="submit">
+            Submit
+          </button>
+        </div><!--End Button-->
+      </form>
+    </div>
+  </body>  
+</html>
